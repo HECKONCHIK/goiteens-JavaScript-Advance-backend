@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000';
+// const BASE_URL = 'http://localhost:3000';
 
 // const newMovie = {
 //     title: "HTML",
@@ -25,18 +25,18 @@ const BASE_URL = 'http://localhost:3000';
 
 
 
-function addNewMovie(newMovie) {
-    const options = {
-        'method': 'POST',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(newMovie)
-    }
-    return fetch(`${BASE_URL}/movies`, options)
-    .then(res => res.json())
-    .then(console.log)
-}
+// function addNewMovie(newMovie) {
+//     const options = {
+//         'method': 'POST',
+//         headers: {
+//             'Content-type': 'application/json'
+//         },
+//         body: JSON.stringify(newMovie)
+//     }
+//     return fetch(`${BASE_URL}/movies`, options)
+//     .then(res => res.json())
+//     .then(console.log)
+// }
 
 // addNewMovie(
 //     {
@@ -52,31 +52,31 @@ function addNewMovie(newMovie) {
 
 // )
     
-function updateMovieById(update, movieId) {
-    const options = {
-        'method': 'PATCH',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(update)
-    }
-    return fetch(`${BASE_URL}/movies/${movieId}`, options)
-    .then(res => res.json())
-    .then(console.log)
-}
+// function updateMovieById(update, movieId) {
+//     const options = {
+//         'method': 'PATCH',
+//         headers: {
+//             'Content-type': 'application/json'
+//         },
+//         body: JSON.stringify(update)
+//     }
+//     return fetch(`${BASE_URL}/movies/${movieId}`, options)
+//     .then(res => res.json())
+//     .then(console.log)
+// }
 
-updateMovieById(
-    {
-        "title": "Desktop",
-      "director": "Oleh Tsap",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-        "rating": 8.8
-    }, 9
-)
+// updateMovieById(
+//     {
+//         "title": "Desktop",
+//       "director": "Oleh Tsap",
+//       "genres": [
+//         "Action",
+//         "Adventure",
+//         "Drama"
+//       ],
+//         "rating": 8.8
+//     }, 9
+// )
 
 // function getMovies() {
 //     fetch('http://localhost:3000/movies')
@@ -89,3 +89,12 @@ updateMovieById(
 //     .then(response => response.json())
 //     .then(console.log)
 // }
+
+
+// function deleteMovieById(movieId) {
+//     fetch(`${BASE_URL}/movies/${movieId}`, { method: `DELETE` })
+//     .then(res => res.json())
+//     .then(console.log())
+// }
+
+// deleteMovieById(23)

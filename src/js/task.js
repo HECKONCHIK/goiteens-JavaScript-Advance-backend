@@ -20,13 +20,14 @@ body: JSON.stringify(template)
 // TASK-1
 
 
-// function getAllStudents() {
-//     fetch(`${BASE_URL}/students`)
-//     .then(res => res.json())
-//     .then(console.log)
-// }
+async function getAllStudents() {
+    const res = await fetch(`${BASE_URL}/students`);
+    const student = await res.json();
+    const articles = await student.articles
+    return articles
+}
 
-// getAllStudents()
+getAllStudents()
 
 /////////////////////////////////////////
 
